@@ -1,0 +1,28 @@
+configuration {
+    modi: [
+        combi,
+        "calendar:~/.config/rofi/gtd/my_calendar.py",
+        "inbox:~/.config/rofi/gtd/in.py",
+        "next_actions:~/.config/rofi/gtd/next_actions.py",
+        "find:~/.config/rofi/gtd/find.py",
+        "bookmarks:~/.config/rofi/gtd/bookmarks.py"
+    ];
+    combi-modi: [
+        calendar,
+        inbox,
+        "next_actions",
+        bookmarks
+    ];
+    width: 60;
+    lines: 20;
+    sidebar-mode: true;
+    hide-scrollbar: true;
+    scroll-method: 1;
+    cycle: true;
+    font: "Iosevka Nerd Font 10";
+    show-icons: true;
+    icon-theme: "Papirus";
+    disable-history: false;
+    fullscreen: false;
+    sort: true;
+}
