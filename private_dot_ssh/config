@@ -3,29 +3,29 @@ Include /etc/ssh/ssh_config.d/*.conf
 Host vps
   HostName 176.126.113.161
   Port 22
-  IdentityFile ~/.ssh/vps_rprtr258
+  IdentityFile /home/rprtr258/.ssh/vps_rprtr258
   User rprtr258
 
 Host vps-root
   HostName 176.126.113.161
   Port 22
-  IdentityFile ~/.ssh/vps_root
+  IdentityFile /home/rprtr258/.ssh/vps_root
   User root
 
 Host rus
   HostName 185.105.91.75
   Port 22
-  IdentityFile ~/.ssh/rus
+  IdentityFile /home/rprtr258/.ssh/rus_rprtr258
   User rprtr258
 
 Host rus-root
   HostName 185.105.91.75
   Port 22
-  IdentityFile ~/.ssh/rus-root
+  IdentityFile /home/rprtr258/.ssh/rus_root
   User root
 
 Host localhost
   HostName 127.0.0.1
   Port 22
-  IdentityFile ~/.ssh/local_ssh
+  IdentityFile /home/rprtr258/.ssh/local_ssh
   User rprtr258
