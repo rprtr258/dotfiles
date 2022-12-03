@@ -24,8 +24,14 @@ Host rus-root
   IdentityFile /home/rprtr258/.ssh/rus_root
   User root
 
-Host localhost
+Host local
   HostName 127.0.0.1
   Port 22
   IdentityFile /home/rprtr258/.ssh/local_ssh
   User rprtr258
+
+Host local-root
+  HostName 127.0.0.1
+  Port 22
+  IdentityFile /home/rprtr258/.ssh/local_root
+  User root
