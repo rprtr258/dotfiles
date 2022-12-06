@@ -1,0 +1,23 @@
+// Place your key bindings in this file to override the defaults
+[
+    {
+        "key": "alt+right",
+        "command": "workbench.action.moveEditorToNextGroup",
+        "when": "!terminalFocus"
+    },
+    {
+        "key": "alt+left",
+        "command": "workbench.action.moveEditorToPreviousGroup",
+        "when": "!terminalFocus"
+    },
+    {
+        "key": "alt+up",
+        "command": "workbench.action.moveEditorToAboveGroup",
+        "when": "!terminalFocus"
+    },
+    {
+        "key": "alt+down",
+        "command": "workbench.action.moveEditorToBelowGroup",
+        "when": "!terminalFocus"
+    }
+]
