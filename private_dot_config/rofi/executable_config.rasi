@@ -5,8 +5,7 @@ configuration {
         ssh,
         "files:~/.config/rofi/file_browser/.sh",
         "locate:~/.config/rofi/locate/.sh",
-        "pastes:~/.config/rofi/pastes/.sh",
-        "search:~/.config/rofi/web_search.py"
+        "pastes:~/.config/rofi/pastes/.sh"
     ];
     combi-modi: [
         drun,

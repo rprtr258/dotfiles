@@ -169,4 +169,6 @@ eval "$(just --completions bash)"
 eval "$(hugo completion bash)"
 eval "$(sake completion bash)"
 eval "$(chezmoi completion bash)"
+eval "$(gh completion -s bash)"
+complete -C x x
 

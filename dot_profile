@@ -27,8 +27,3 @@ if [ -d "$HOME/.local/bin" ] ; then
 fi
 . "$HOME/.cargo/env"
 
-
-
-# Added by Toolbox App
-export PATH="$PATH:/home/rprtr258/.local/share/JetBrains/Toolbox/scripts"
-
