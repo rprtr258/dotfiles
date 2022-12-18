@@ -57,19 +57,19 @@ function git-branch {
 }
 
 function prompt_command {
-    exitstatus="$?"
-    USER="\u"
-    HOSTNAME="\h"
-    PROMPT='\n\$ '
+    local exitstatus="$?"
+    local USER="\u"
+    local HOSTNAME="\h"
+    local PROMPT='\n\$ '
 
-    BOLD="\[\033[1m\]"
-    RED='\[\e[91m\]'
-    GREEN='\[\033[01;32m\]'
-    BLUE='\[\033[01;34m\]'
-    PURPLE="\[\e[35;1m\]"
-    CYAN="\[\e[36;1m\]"
-    WHITE='\[\033[00m\]'
-    OFF="\[\033[m\]"
+    local BOLD="\[\033[1m\]"
+    local RED='\[\e[91m\]'
+    local GREEN='\[\033[01;32m\]'
+    local BLUE='\[\033[01;34m\]'
+    local PURPLE="\[\e[35;1m\]"
+    local CYAN="\[\e[36;1m\]"
+    local WHITE='\[\033[00m\]'
+    local OFF="\[\033[m\]"
 
     branch=$(git-branch)
     changes=$(git status -s 2> /dev/null | wc -l | sed -e 's/ *//')
@@ -91,8 +91,8 @@ function prompt_command {
     PS1="${GREEN}${USER}@${HOSTNAME}${OFF}:${BLUE}\w${RED}${branch}${OFF}[${EXITCOLOR}${exitstatus}${OFF}]${PROMPT}"
     PS2="${BOLD}>${OFF} "
     
-    dir=$(pwd)
-    title=$(basename "${dir}")
+    local dir=$(pwd)
+    local title=$(basename "${dir}")
     echo -n -e "\033]0;${title}\007"
 }
 
@@ -163,6 +163,7 @@ eval $(dircolors -b ~/.bash_colors)
 export PATH=$PATH:/usr/local/go/bin
 export PATH=$PATH:~/go/bin
 export PATH=$PATH:/var/lib/flatpak/exports/bin/
+export EDITOR=vim
 
 eval "$(pm2 completion)"
 eval "$(just --completions bash)"
@@ -171,4 +172,6 @@ eval "$(sake completion bash)"
 eval "$(chezmoi completion bash)"
 eval "$(gh completion -s bash)"
 complete -C x x
+
+[[ -s "/home/rprtr258/.gvm/scripts/gvm" ]] && source "/home/rprtr258/.gvm/scripts/gvm"
 
