@@ -165,13 +165,21 @@ export PATH=$PATH:~/go/bin
 export PATH=$PATH:/var/lib/flatpak/exports/bin/
 export EDITOR=vim
 
-eval "$(pm2 completion)"
-eval "$(just --completions bash)"
-eval "$(hugo completion bash)"
-eval "$(sake completion bash)"
-eval "$(chezmoi completion bash)"
-eval "$(gh completion -s bash)"
+#eval "$(pm2 completion)"
+#eval "$(just --completions bash)"
+#eval "$(hugo completion bash)"
+#eval "$(sake completion bash)"
+#eval "$(chezmoi completion bash)"
+#eval "$(gh completion -s bash)"
 complete -C x x
+
+#echo "$(pm2 completion)" >> .complete
+#echo "$(just --completions bash)" >> .complete
+#echo "$(hugo completion bash)" >> .complete
+#echo "$(sake completion bash)" >> .complete
+#echo "$(chezmoi completion bash)" >> .complete
+#echo "$(gh completion -s bash)" >> .complete
+source ~/.complete
 
 [[ -s "/home/rprtr258/.gvm/scripts/gvm" ]] && source "/home/rprtr258/.gvm/scripts/gvm"
 

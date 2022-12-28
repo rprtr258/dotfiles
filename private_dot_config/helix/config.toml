@@ -1,4 +1,4 @@
-theme = "onedark"
+theme = "tokyonight"
 
 [editor]
 line-number = "relative"
