@@ -3,7 +3,6 @@ configuration {
         combi,
         "calendar:~/.config/rofi/gtd/gtd calendar",
         "inbox:~/.config/rofi/gtd/gtd in",
-        "next_actions:~/.config/rofi/gtd/gtd actions",
         "find:~/.config/rofi/gtd/gtd find",
         "bookmarks:~/.config/rofi/gtd/gtd bookmarks"
     ];
