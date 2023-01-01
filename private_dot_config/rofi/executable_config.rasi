@@ -2,7 +2,6 @@ configuration {
     modi: [
         combi,
         drun,
-        "files:~/.config/rofi/file_browser/.sh",
         "locate:~/.config/rofi/locate/.sh",
         "pastes:~/.config/rofi/pastes/.sh"
     ];
