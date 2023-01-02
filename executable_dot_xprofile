@@ -1,5 +1,6 @@
 #!/usr/bin/bash
 
-setxkbmap -layout us,ru -option 'grp:alt_shift_toggle' -option 'ctrl:nocaps' -option 'numpad:microsoft'
+setxkbmap -layout us,ru -option 'grp:win_space_toggle' -option 'ctrl:nocaps' -option 'numpad:microsoft'
 parcellite &
 just -f ~/cron/justfile wallpaper
+
