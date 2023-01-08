@@ -50,3 +50,4 @@ x-scheme-handler/tg=userapp-Telegram Desktop-J1GAS1.desktop;
 audio/x-mod=nvim.desktop;org.gnome.Evince.desktop;
 inode/directory=pragha.desktop;rhythmbox-device.desktop;
 application/smil+xml=nvim.desktop;
+image/webp=gimp.desktop;

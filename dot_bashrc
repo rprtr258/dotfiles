@@ -132,7 +132,10 @@ alias mv='mv -i'
 alias cp='cp -i'
 alias gs='git status'
 alias ga='git add'
-alias gm='git commit -m'
+function gm {
+  local BRANCH="$(git-branch)"
+  git commit -m "$BRANCH: $*"
+}
 alias gd='git diff'
 alias gt='git log --graph --decorate=full --oneline --all'
 alias git-prune="git branch --merged master | grep -v '^[ *]*master$' | xargs git branch -d"
