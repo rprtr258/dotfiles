@@ -1,0 +1,113 @@
+#specs:
+#  custom:
+#    output: table
+#    parallel: true
+
+targets:
+  default:
+    all: true
+
+# themes:
+#   default:
+#     table:
+#       options:
+#         draw_border: true
+#         separate_columns: true
+#         separate_header: true
+#         separate_rows: false
+
+projects:
+  7tv-tf-provider:
+    url: git@github.com:rprtr258/7tv-tf-provider.git
+
+  Bttv-emotes-search:
+    tags: [go]
+    url: git@github.com:rprtr258/Bttv-emotes-search.git
+
+  VKUtils:
+    url: git@github.com:rprtr258/VKUtils.git
+
+  balaboba:
+    url: git@github.com:rprtr258/balaboba.git
+
+  counters:
+
+  cron:
+
+  cronus:
+    url: git@github.com:rprtr258/cronus.git
+
+  dom-graph:
+
+  fimgs:
+    url: git@github.com:rprtr258/fimgs.git
+
+  game:
+    url: git@github.com:rprtr258/sonar-game.git
+
+  game-ocaml:
+
+  go-flow:
+    url: git@github.com:rprtr258/go-flow.git
+
+  gtd:
+    url: git@github.com:rprtr258/gtd.git
+
+  lish:
+    url: git@github.com:rprtr258/lish.git
+
+  pm:
+    url: git@github.com:rprtr258/pm.git
+
+  rprtr258:
+    url: git@github.com:rprtr258/rprtr258.git
+
+  rprtr258.github.io:
+    url: git@github.com:rprtr258/rprtr258.github.io.git
+
+  rwenv:
+    url: git@github.com:rprtr258/rwenv.git
+
+  sixty:
+    url: git@github.com:rprtr258/sixty.git
+
+  squid-proxy:
+    url: https://github.com/yegor256/squid-proxy/
+
+  tg-gtd-notifier:
+    url: git@github.com:rprtr258/notion-tg-gtd-notifier.git
+
+  tsuwari:
+    url: git@github.com:rprtr258/tsuwari.git
+
+  tts:
+    url: git@github.com:rprtr258/tts.git
+
+  twitch:
+    url: git@github.com:rprtr258/twitch-cli.git
+
+  twitch-bot:
+    url: git@github.com:rprtr258/twitch-bot-api.git
+
+  twitch-emotes-modifier-plugin:
+    url: git@github.com:rprtr258/twitch-emotes-modifier-plugin.git
+
+  untangling:
+    url: git@github.com:rprtr258/untangling.git
+
+  various-scripts:
+    url: git@github.com:rprtr258/various-scripts.git
+
+  x:
+    url: git@github.com:rprtr258/sturdy-octo-bassoon.git
+
+  xerr:
+    url: git@github.com:rprtr258/xerr.git
+
+tasks:
+  status:
+    dest: show git status
+    cmd: git status -s
+  hello:
+    desc: Print Hello World
+    cmd: echo "Hello World"
