@@ -182,6 +182,7 @@ complete -C x x
 #echo "$(sake completion bash)" >> .complete
 #echo "$(chezmoi completion bash)" >> .complete
 #echo "$(gh completion -s bash)" >> .complete
+#echo "$(mani completion bash)" >> .complete
 source ~/.complete
 
 [[ -s "/home/rprtr258/.gvm/scripts/gvm" ]] && source "/home/rprtr258/.gvm/scripts/gvm"
