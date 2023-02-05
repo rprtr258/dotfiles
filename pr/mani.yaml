@@ -17,7 +17,11 @@ targets:
 #         separate_rows: false
 
 projects:
+  infra:
+    tags: [docker]
+
   7tv-tf-provider:
+    tags: [go]
     url: git@github.com:rprtr258/7tv-tf-provider.git
 
   Bttv-emotes-search:
@@ -25,21 +29,27 @@ projects:
     url: git@github.com:rprtr258/Bttv-emotes-search.git
 
   VKUtils:
+    tags: [go]
     url: git@github.com:rprtr258/VKUtils.git
 
   balaboba:
+    tags: [go]
     url: git@github.com:rprtr258/balaboba.git
 
   counters:
+    tags: [js]
 
   cron:
 
   cronus:
+    tags: [go]
     url: git@github.com:rprtr258/cronus.git
 
   dom-graph:
+    tags: [js]
 
   fimgs:
+    tags: [go]
     url: git@github.com:rprtr258/fimgs.git
 
   game:
@@ -48,6 +58,7 @@ projects:
   game-ocaml:
 
   go-flow:
+    tags: [go]
     url: git@github.com:rprtr258/go-flow.git
 
   gtd:
@@ -57,6 +68,7 @@ projects:
     url: git@github.com:rprtr258/lish.git
 
   pm:
+    tags: [go]
     url: git@github.com:rprtr258/pm.git
 
   rprtr258:
@@ -66,45 +78,58 @@ projects:
     url: git@github.com:rprtr258/rprtr258.github.io.git
 
   rwenv:
+    tags: [go]
     url: git@github.com:rprtr258/rwenv.git
 
   sixty:
+    tags: [go]
     url: git@github.com:rprtr258/sixty.git
 
   squid-proxy:
+    tags: [docker]
     url: https://github.com/yegor256/squid-proxy/
 
   tg-gtd-notifier:
+    tags: [go]
     url: git@github.com:rprtr258/notion-tg-gtd-notifier.git
 
   tsuwari:
+    tags: [go, js]
     url: git@github.com:rprtr258/tsuwari.git
 
   tts:
+    tags: [docker]
     url: git@github.com:rprtr258/tts.git
 
   twitch:
+    tags: [go]
     url: git@github.com:rprtr258/twitch-cli.git
 
   twitch-bot:
+    tags: [go]
     url: git@github.com:rprtr258/twitch-bot-api.git
 
   twitch-emotes-modifier-plugin:
+    tags: [go]
     url: git@github.com:rprtr258/twitch-emotes-modifier-plugin.git
 
   untangling:
+    tags: [js]
     url: git@github.com:rprtr258/untangling.git
 
   various-scripts:
     url: git@github.com:rprtr258/various-scripts.git
 
   x:
+    tags: [go]
     url: git@github.com:rprtr258/sturdy-octo-bassoon.git
 
   xerr:
+    tags: [go]
     url: git@github.com:rprtr258/xerr.git
 
   pnpm-forward-proxy:
+    tags: [go, docker]
     url: git@github.com:rprtr258/pnpm-forward-proxy.git
 
 tasks:
