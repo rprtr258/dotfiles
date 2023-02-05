@@ -1,7 +1,7 @@
-#specs:
-#  custom:
-#    output: table
-#    parallel: true
+specs:
+  default:
+    #output: table
+    parallel: true
 
 targets:
   default:
