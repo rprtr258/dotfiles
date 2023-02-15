@@ -64,6 +64,9 @@ projects:
   gtd:
     url: git@github.com:rprtr258/gtd.git
 
+  jsonnet-svg:
+    url: git@github.com:rprtr258/jsonnet-svg.git
+
   lish:
     url: git@github.com:rprtr258/lish.git
 
