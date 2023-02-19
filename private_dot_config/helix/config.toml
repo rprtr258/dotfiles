@@ -5,6 +5,7 @@ line-number = "relative"
 mouse = false
 auto-pairs = false
 rulers = [80, 120]
+scrolloff = 2
 
 [editor.cursor-shape]
 insert = "bar"
