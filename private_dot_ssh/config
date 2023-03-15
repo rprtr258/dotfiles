@@ -1,5 +1,17 @@
 Include /etc/ssh/ssh_config.d/*.conf
 
+Host arg
+  HostName 45.87.153.219
+  Port 22
+  IdentityFile /home/rprtr258/.ssh/arg_rprtr258
+  User rprtr258
+
+Host arg-root
+  HostName 45.87.153.219
+  Port 22
+  IdentityFile /home/rprtr258/.ssh/arg_root
+  User root
+
 Host vps
   HostName 176.126.113.161
   Port 22
