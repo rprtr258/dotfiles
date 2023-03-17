@@ -96,10 +96,6 @@ projects:
     tags: [go]
     url: git@github.com:rprtr258/notion-tg-gtd-notifier.git
 
-  tsuwari:
-    tags: [go, js]
-    url: git@github.com:rprtr258/tsuwari.git
-
   tts:
     tags: [docker]
     url: git@github.com:rprtr258/tts.git
