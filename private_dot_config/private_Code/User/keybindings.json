@@ -19,5 +19,9 @@
         "key": "alt+down",
         "command": "workbench.action.moveEditorToBelowGroup",
         "when": "!terminalFocus"
+    },
+    {
+        "key": "alt+t",
+        "command": "editor.action.goToTypeDefinition"
     }
 ]
