@@ -135,6 +135,10 @@ projects:
     tags: [go]
     url: git@github.com:rprtr258/rpmp.git
 
+  notes-bot:
+    tags: [go]
+    url: git@github.com:rprtr258/notes-bot.git
+
 tasks:
   status:
     desc: show git status

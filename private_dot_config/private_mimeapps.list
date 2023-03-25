@@ -28,6 +28,7 @@ x-scheme-handler/discord-529050037532098580=discord-529050037532098580.desktop
 image/svg+xml=firefox-esr.desktop;
 x-scheme-handler/jetbrains=jetbrains-toolbox.desktop
 x-scheme-handler/fleet=jetbrains-fleet.desktop
+video/webm=org.gnome.Totem.desktop
 
 [Added Associations]
 application/xml=org.gnome.gedit.desktop;
@@ -53,3 +54,4 @@ application/smil+xml=vim.desktop;
 image/webp=gimp.desktop;
 image/gif=gimp.desktop;
 text/x-ocaml=vim.desktop;
+video/webm=org.gnome.Totem.desktop;
