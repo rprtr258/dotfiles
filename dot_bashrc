@@ -88,7 +88,7 @@ function prompt_command {
       EXITCOLOR="${RED}"
     fi
 
-    PS1="${GREEN}${USER}@${HOSTNAME}${OFF}:${BLUE}\w${RED}${branch}${OFF}[${EXITCOLOR}${exitstatus}${OFF}]${PROMPT}"
+    PS1="${VIRTUAL_ENV_PROMPT}${GREEN}${USER}@${HOSTNAME}${OFF}:${BLUE}\w${RED}${branch}${OFF}[${EXITCOLOR}${exitstatus}${OFF}]${PROMPT}"
     PS2="${BOLD}>${OFF} "
     
     local dir=$(pwd)
