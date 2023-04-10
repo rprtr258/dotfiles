@@ -136,11 +136,14 @@ function gm {
   local BRANCH="$(git-branch)"
   git commit -m "$BRANCH: $*"
 }
+
+export GIT_EXTERNAL_DIFF=difft
 alias gd='git diff'
+
 alias gt='git log --graph --decorate=full --oneline --all'
 alias git-prune="git branch --merged master | grep -v '^[ *]*master$' | xargs git branch -d"
 alias pass="keepassxc-cli clip /mnt/hdd/keepass/passwords.kdbx -k /mnt/hdd/keepass/pass_db.key --no-password"
-alias dps='docker ps --format "table {{.Names}}\t{{.Image}}\t{{.Ports}}"'
+alias dps='docker ps --format "table {{.Names}}\t{{.Image}}\t{{.Status}}\t{{.Ports}}"'
 alias ssh="TERM=xterm-256color $(which ssh)"
 
 function gpu {
