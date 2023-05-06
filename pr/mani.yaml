@@ -139,6 +139,18 @@ projects:
     tags: [go]
     url: git@github.com:rprtr258/notes-bot.git
 
+  gobackup:
+    tags: [go]
+    url: git@github.com:rprtr258/gobackup.git
+
+  fun:
+    tags: [go]
+    url: git@github.com:rprtr258/fun.git
+
+  log:
+    tags: [go]
+    url: git@github.com:rprtr258/log.git
+
 tasks:
   status:
     desc: show git status
