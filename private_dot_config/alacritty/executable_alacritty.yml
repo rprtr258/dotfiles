@@ -1,6 +1,11 @@
 font:
   size: 11.0
 
+scrolling:
+  # Maximum number of lines in the scrollback buffer.
+  # Specifying '0' will disable scrolling.
+  history: 100000
+
 colors:
   primary:
     background: '0x1a1b26'
