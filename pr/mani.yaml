@@ -17,24 +17,21 @@ targets:
 #         separate_rows: false
 
 projects:
-  infra:
-    tags: [docker]
-
   7tv-manager:
     tags: [go]
     url: git@github.com:rprtr258/7tv-manager.git
 
-  Bttv-emotes-search:
-    tags: [go]
-    url: git@github.com:rprtr258/Bttv-emotes-search.git
-
-  VKUtils:
-    tags: [go]
-    url: git@github.com:rprtr258/VKUtils.git
+  ansible:
+    tags: [fork]
+    url: ssh://git@github.com/ansible/ansible
 
   balaboba:
     tags: [go]
     url: git@github.com:rprtr258/balaboba.git
+
+  Bttv-emotes-search:
+    tags: [go]
+    url: git@github.com:rprtr258/Bttv-emotes-search.git
 
   counters:
     tags: [js]
@@ -45,6 +42,17 @@ projects:
     tags: [go]
     url: git@github.com:rprtr258/cronus.git
 
+  debuql:
+    tags: [go]
+
+  docker:
+    tags: [fork]
+    url: ssh://git@github.com/moby/moby/
+
+  docker-cli:
+    tags: [fork]
+    url: ssh://git@github.com/docker/cli
+
   dom-graph:
     tags: [js]
 
@@ -52,10 +60,25 @@ projects:
     tags: [go]
     url: git@github.com:rprtr258/fimgs.git
 
+  forward-proxy:
+    tags: [go, docker]
+    url: git@github.com:rprtr258/forward-proxy.git
+
+  fun:
+    tags: [go]
+    url: git@github.com:rprtr258/fun.git
+
   game:
     url: git@github.com:rprtr258/sonar-game.git
 
   game-ocaml:
+
+  gendoc:
+    tags: [go]
+
+  gobackup:
+    tags: [go]
+    url: git@github.com:rprtr258/gobackup.git
 
   go-flow:
     tags: [go]
@@ -64,15 +87,44 @@ projects:
   gtd:
     url: git@github.com:rprtr258/gtd.git
 
+  html-builder:
+    tags: [go]
+
+  infra:
+    tags: [docker]
+
   jsonnet-svg:
     url: git@github.com:rprtr258/jsonnet-svg.git
 
   lish:
     url: git@github.com:rprtr258/lish.git
 
+  log:
+    tags: [go]
+    url: git@github.com:rprtr258/log.git
+
+  mk:
+    tags: [go]
+    url: git@github.com:rprtr258/mk.git
+
+  notes-bot:
+    tags: [go]
+    url: git@github.com:rprtr258/notes-bot.git
+
   pm:
     tags: [go]
     url: git@github.com:rprtr258/pm.git
+
+  punused:
+    tags: [go]
+
+  r256_1:
+    tags: [go]
+    url: git@gitlab.ozon.dev:poletansky/homework.git
+
+  rpmp:
+    tags: [go]
+    url: git@github.com:rprtr258/rpmp.git
 
   rprtr258:
     url: git@github.com:rprtr258/rprtr258.git
@@ -84,12 +136,16 @@ projects:
     tags: [go]
     url: git@github.com:rprtr258/rwenv.git
 
+  simpdb:
+    tags: [go]
+    url: git@github.com:rprtr258/simpdb.git
+
   sixty:
     tags: [go]
     url: git@github.com:rprtr258/sixty.git
 
   squid-proxy:
-    tags: [docker]
+    tags: [docker, fork]
     url: https://github.com/yegor256/squid-proxy/
 
   tg-gtd-notifier:
@@ -119,6 +175,10 @@ projects:
   various-scripts:
     url: git@github.com:rprtr258/various-scripts.git
 
+  VKUtils:
+    tags: [go]
+    url: git@github.com:rprtr258/VKUtils.git
+
   x:
     tags: [go]
     url: git@github.com:rprtr258/sturdy-octo-bassoon.git
@@ -126,34 +186,6 @@ projects:
   xerr:
     tags: [go]
     url: git@github.com:rprtr258/xerr.git
-
-  forward-proxy:
-    tags: [go, docker]
-    url: git@github.com:rprtr258/forward-proxy.git
-
-  rpmp:
-    tags: [go]
-    url: git@github.com:rprtr258/rpmp.git
-
-  notes-bot:
-    tags: [go]
-    url: git@github.com:rprtr258/notes-bot.git
-
-  gobackup:
-    tags: [go]
-    url: git@github.com:rprtr258/gobackup.git
-
-  fun:
-    tags: [go]
-    url: git@github.com:rprtr258/fun.git
-
-  log:
-    tags: [go]
-    url: git@github.com:rprtr258/log.git
-
-  r256_1:
-    tags: [go]
-    url: git@gitlab.ozon.dev:poletansky/homework.git
 
 tasks:
   status:
