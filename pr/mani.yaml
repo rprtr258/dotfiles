@@ -33,6 +33,10 @@ projects:
     tags: [go]
     url: git@github.com:rprtr258/Bttv-emotes-search.git
 
+  tea:
+    tags: [go]
+    url: git@github.com:rprtr258/tea.git
+
   counters:
     tags: [js]
 
