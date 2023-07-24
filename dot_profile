@@ -27,5 +27,3 @@ if [ -d "$HOME/.local/bin" ] ; then
 fi
 . "$HOME/.cargo/env"
 
-# opam configuration
-test -r /home/rprtr258/.opam/opam-init/init.sh && . /home/rprtr258/.opam/opam-init/init.sh > /dev/null 2> /dev/null || true
