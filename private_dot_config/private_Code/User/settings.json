@@ -75,5 +75,6 @@
     "zig.zls.path": "/home/rprtr258/.config/Code/User/globalStorage/ziglang.vscode-zig/zls_install/zls",
     "zig.zls.enableInlayHints": false,
     "go.survey.prompt": false,
-    "git.openRepositoryInParentFolders": "never"
+    "git.openRepositoryInParentFolders": "never",
+    "diffEditor.codeLens": true
 }

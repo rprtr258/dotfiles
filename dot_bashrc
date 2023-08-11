@@ -169,6 +169,7 @@ eval $(dircolors -b ~/.bash_colors)
 
 export PATH=$PATH:/usr/local/go/bin
 export PATH=$PATH:~/go/bin
+export PATH=$PATH:~/bin
 export PATH=$PATH:/var/lib/flatpak/exports/bin/
 export EDITOR=vim
 
