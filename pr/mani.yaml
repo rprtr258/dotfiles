@@ -68,10 +68,6 @@ projects:
     tags: [go, docker]
     url: git@github.com:rprtr258/forward-proxy.git
 
-  fun:
-    tags: [go]
-    url: git@github.com:rprtr258/fun.git
-
   game:
     url: git@github.com:rprtr258/sonar-game.git
 

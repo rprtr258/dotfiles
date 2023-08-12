@@ -1,5 +1,8 @@
 {
-    "editor.rulers": [80, 120],
+    "editor.rulers": [
+        80,
+        120
+    ],
     "editor.minimap.enabled": false,
     "window.menuBarVisibility": "toggle",
     "rust-analyzer.completion.addCallParenthesis": false,
@@ -21,12 +24,6 @@
     "explorer.confirmDelete": false,
     "explorer.confirmDragAndDrop": false,
     "workbench.editor.enablePreview": false,
-    "go.toolsManagement.autoUpdate": true,
-    "gopls": {
-        "ui.diagnostic.analyses": {
-            "stdmethods": false
-        },
-    },
     "editor.suggest.showReferences": false,
     "rust-analyzer.cargo.buildScripts.enable": false,
     "rust-analyzer.diagnostics.experimental.enable": true,
@@ -38,7 +35,6 @@
     "rust-analyzer.inlayHints.typeHints.enable": false,
     "editor.fontFamily": "Source Code Pro, monospace",
     "files.insertFinalNewline": true,
-    "rescript.settings.askToStartBuild": false,
     "javascript.updateImportsOnFileMove.enabled": "never",
     "workbench.editor.focusRecentEditorAfterClose": false,
     "asciidoc.use_asciidoctorpdf": true,
@@ -54,8 +50,6 @@
     "svelte.enable-ts-plugin": true,
     "svelte.plugin.svelte.note-new-transformation": false,
     "svg.preview.mode": "svg",
-    "go.lintTool": "golangci-lint",
-    "go.lintOnSave": "workspace",
     "redhat.telemetry.enabled": false,
     "ansible.ansible.path": ".venv/bin/ansible",
     "ansible.ansibleNavigator.path": ".venv/bin/ansible-navigator",
@@ -76,5 +70,16 @@
     "zig.zls.enableInlayHints": false,
     "go.survey.prompt": false,
     "git.openRepositoryInParentFolders": "never",
-    "diffEditor.codeLens": true
+    "diffEditor.codeLens": true,
+    "gopls": {
+        "formatting.gofumpt": true,
+        "ui.diagnostic.analyses": {
+            "stdmethods": false
+        },
+    },
+    "go.toolsManagement.autoUpdate": true,
+    // "go    .formatTool": "gofumpt",
+    "go.lintTool": "golangci-lint",
+    "go.lintOnSave": "workspace",
+    "editor.formatOnSave": true
 }
