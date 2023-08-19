@@ -81,5 +81,6 @@
     // "go    .formatTool": "gofumpt",
     "go.lintTool": "golangci-lint",
     "go.lintOnSave": "workspace",
-    "editor.formatOnSave": true
+    "editor.formatOnSave": true,
+    "diffEditor.wordWrap": "off"
 }

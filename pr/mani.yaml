@@ -46,6 +46,10 @@ projects:
     tags: [go]
     url: git@github.com:rprtr258/cronus.git
 
+  cs:
+    tags: [go]
+    url: git@github.com:rprtr258/cs.git
+
   debuql:
     tags: [go]
 
@@ -80,9 +84,9 @@ projects:
     tags: [go]
     url: git@github.com:rprtr258/gobackup.git
 
-  go-flow:
+  fun:
     tags: [go]
-    url: git@github.com:rprtr258/go-flow.git
+    url: git@github.com:rprtr258/fun.git
 
   gtd:
     url: git@github.com:rprtr258/gtd.git
