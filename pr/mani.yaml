@@ -80,10 +80,6 @@ projects:
   gendoc:
     tags: [go]
 
-  gobackup:
-    tags: [go]
-    url: git@github.com:rprtr258/gobackup.git
-
   fun:
     tags: [go]
     url: git@github.com:rprtr258/fun.git
