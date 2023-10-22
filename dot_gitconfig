@@ -1,6 +1,8 @@
 [user]
 	email = poletansky@gmail.com
 	name = Poletansky Viktor
+[includeIf "gitdir:~/pr/"]
+	path = ~/pr/.gitconfig
 [pull]
 	rebase = false
 [init]
