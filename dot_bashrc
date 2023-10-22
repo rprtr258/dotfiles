@@ -180,7 +180,7 @@ export EDITOR=vim
 #eval "$(chezmoi completion bash)"
 #eval "$(gh completion -s bash)"
 complete -C x x
-
+complete -C /home/rprtr258/bin/nomad nomad
 #echo "$(pm2 completion)" >> .complete
 #echo "$(just --completions bash)" >> .complete
 #echo "$(hugo completion bash)" >> .complete

@@ -84,6 +84,10 @@ projects:
     tags: [go]
     url: git@github.com:rprtr258/fun.git
 
+  flatnotes:
+    tags: [go]
+    url: git@github.com:rprtr258/flatnotes.git
+
   gtd:
     url: git@github.com:rprtr258/gtd.git
 
@@ -143,6 +147,10 @@ projects:
   sixty:
     tags: [go]
     url: git@github.com:rprtr258/sixty.git
+
+  styleguide:
+    tags: [go]
+    url: git@github.com:rprtr258/styleguide.git
 
   squid-proxy:
     tags: [docker, fork]
