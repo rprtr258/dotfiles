@@ -173,6 +173,8 @@ export PATH=$PATH:~/bin
 export PATH=$PATH:/var/lib/flatpak/exports/bin
 export EDITOR=vim
 
+[[ -s "/home/rprtr258/.gvm/scripts/gvm" ]] && source "/home/rprtr258/.gvm/scripts/gvm"
+
 #eval "$(pm2 completion)"
 #eval "$(just --completions bash)"
 #eval "$(hugo completion bash)"
@@ -188,7 +190,9 @@ complete -C /home/rprtr258/bin/nomad nomad
 #echo "$(chezmoi completion bash)" >> .complete
 #echo "$(gh completion -s bash)" >> .complete
 #echo "$(mani completion bash)" >> .complete
+source <(gopass completion bash)
 source ~/.complete
 
-[[ -s "/home/rprtr258/.gvm/scripts/gvm" ]] && source "/home/rprtr258/.gvm/scripts/gvm"
-
+function lk {
+  cd "$(walk "$@")"
+}

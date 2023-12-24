@@ -15,6 +15,7 @@ config.color_scheme = 'Catppuccin Mocha'
 config.enable_scroll_bar = true
 config.audible_bell = 'Disabled'
 config.harfbuzz_features = { 'calt=0', 'clig=0', 'liga=0' }
+config.hide_tab_bar_if_only_one_tab = true
 
 -- and finally, return the configuration to wezterm
 return config

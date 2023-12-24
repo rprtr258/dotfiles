@@ -82,5 +82,15 @@
     "go.lintTool": "golangci-lint",
     "go.lintOnSave": "workspace",
     "editor.formatOnSave": true,
-    "diffEditor.wordWrap": "off"
+    "diffEditor.wordWrap": "off",
+    "[vue]": {
+        "editor.formatOnType": false,
+        "editor.formatOnSave": false
+    },
+    "vue.autoInsert.bracketSpacing": false,
+    "vue.autoInsert.parentheses": false,
+    "vue.codeActions.enabled": false,
+    "vue.codeLens.enabled": false,
+    "vue.complete.normalizeComponentImportName": false,
+    "vue.server.fullCompletionList": true
 }
