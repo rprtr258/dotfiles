@@ -142,13 +142,16 @@ alias gd='git diff'
 
 alias gt='git log --graph --decorate=full --oneline --all'
 alias git-prune="git branch --merged master | grep -v '^[ *]*master$' | xargs git branch -d"
-alias pass="keepassxc-cli clip /mnt/hdd/keepass/passwords.kdbx -k /mnt/hdd/keepass/pass_db.key --no-password"
 alias dps='docker ps --format "table {{.Names}}\t{{.Image}}\t{{.Status}}\t{{.Ports}}"'
 alias ssh="TERM=xterm-256color $(which ssh)"
 
 function gpu {
     branch=$(git-branch)
     git push -u origin $branch
+}
+
+function lk {
+  cd "$(walk "$@")"
 }
 
 # enable programmable completion features (you don't need to enable
@@ -175,24 +178,15 @@ export EDITOR=vim
 
 [[ -s "/home/rprtr258/.gvm/scripts/gvm" ]] && source "/home/rprtr258/.gvm/scripts/gvm"
 
-#eval "$(pm2 completion)"
-#eval "$(just --completions bash)"
-#eval "$(hugo completion bash)"
-#eval "$(sake completion bash)"
-#eval "$(chezmoi completion bash)"
-#eval "$(gh completion -s bash)"
 complete -C x x
 complete -C /home/rprtr258/bin/nomad nomad
 #echo "$(pm2 completion)" >> .complete
-#echo "$(just --completions bash)" >> .complete
-#echo "$(hugo completion bash)" >> .complete
 #echo "$(sake completion bash)" >> .complete
 #echo "$(chezmoi completion bash)" >> .complete
 #echo "$(gh completion -s bash)" >> .complete
 #echo "$(mani completion bash)" >> .complete
-source <(gopass completion bash)
 source ~/.complete
 
-function lk {
-  cd "$(walk "$@")"
-}
+[[ -f ~/.bash-preexec.sh ]] && source ~/.bash-preexec.sh
+eval "$(atuin init bash --disable-up-arrow)"
+
