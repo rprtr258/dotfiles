@@ -1,0 +1,4 @@
+packages:
+  debian:
+    apk:
+      - 'git'
