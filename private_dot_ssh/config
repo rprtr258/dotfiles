@@ -1,41 +1,5 @@
 Include /etc/ssh/ssh_config.d/*.conf
 
-Host arg
-  HostName 45.87.153.219
-  Port 22
-  IdentityFile /home/rprtr258/.ssh/infra
-  User rprtr258
-
-Host arg-root
-  HostName 45.87.153.219
-  Port 22
-  IdentityFile /home/rprtr258/.ssh/infra
-  User root
-
-Host vps
-  HostName 176.126.113.161
-  Port 22
-  IdentityFile /home/rprtr258/.ssh/infra
-  User rprtr258
-
-Host vps-root
-  HostName 176.126.113.161
-  Port 22
-  IdentityFile /home/rprtr258/.ssh/infra
-  User root
-
-Host rus
-  HostName 185.105.91.75
-  Port 22
-  IdentityFile /home/rprtr258/.ssh/infra
-  User rprtr258
-
-Host rus-root
-  HostName 185.105.91.75
-  Port 22
-  IdentityFile /home/rprtr258/.ssh/infra
-  User root
-
 Host local
   HostName 127.0.0.1
   Port 22
@@ -47,3 +11,30 @@ Host local-root
   Port 22
   IdentityFile /home/rprtr258/.ssh/local_root
   User root
+
+Host asus
+  Hostname 192.168.0.151
+  User rprtr258
+  PubKeyAuthentication yes
+  IdentityFile /home/rprtr258/.ssh/asus
+
+# firstvds
+Host vps1
+  Hostname 62.109.17.76
+  Port 22
+  User root
+  IdentityFile /home/rprtr258/.ssh/infra
+
+# pqhosting
+Host vps3
+  HostName 45.87.153.219
+  Port 22
+  User root
+  IdentityFile /home/rprtr258/.ssh/infra
+
+Host git.rprtr.xyz
+  Port 2221
+  User git
+  IdentityFile /home/rprtr258/.ssh/gitea
+  IdentitiesOnly yes
+
