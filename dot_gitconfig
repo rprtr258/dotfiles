@@ -1,10 +1,14 @@
 [user]
-	email = poletansky@gmail.com
-	name = Poletansky Viktor
-[includeIf "gitdir:~/pr/"]
-	path = ~/pr/.gitconfig
+  email = poletansky@gmail.com
+  name = Poletansky Viktor
+[core]
+	editor = nvim
+[includeIf "gitdir:~/work/"]
+	path = ~/work/.gitconfig
 [pull]
 	rebase = false
+[rerere]
+	enabled = true
 [init]
 	defaultBranch = master
 [filter "lfs"]
