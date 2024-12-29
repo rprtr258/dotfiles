@@ -51,6 +51,7 @@ function prompt_command {
   local USER="\u";
   local HOSTNAME="\h";
   local PROMPT='\n\$ ';
+
   local BOLD="\[\033[1m\]";
   local RED='\[\e[91m\]';
   local GREEN='\[\033[01;92m\]';
@@ -58,6 +59,7 @@ function prompt_command {
   local CYAN="\[\e[36;1m\]";
   local WHITE='\[\033[00m\]';
   local OFF="\[\033[m\]";
+
   branch=$(git-branch);
   changes=$(git status -s 2> /dev/null | wc -l | sed -e 's/ *//');
   if [ "${changes}" -eq 0 ]; then
