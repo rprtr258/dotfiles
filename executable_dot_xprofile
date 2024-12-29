@@ -1,6 +1,37 @@
-#!/usr/bin/bash
+#!/usr/bin/env bash
 
-setxkbmap -layout us,ru -option '' -option 'grp:win_space_toggle' -option 'ctrl:nocaps' -option 'numpad:microsoft'
-parcellite &
-just -f ~/pr/cron/justfile wallpaper
+run_heynote() {
+	timeout=5
+	application=~/Downloads/apps/Heynote_1.8.0_x86_64.AppImage
+	: "${class:+and .container.window_properties.class=\"$class\"}"
+	i3-msg "exec $application"
+	timeout "$timeout" i3-msg -t subscribe -m '["window"]' |
+		stdbuf -o0 jq -r "select(.change==\"new\" $class) |
+      \"[con_id=\(.container.id)] move to scratchpad;\"" |
+		xargs -I{} i3-msg {}
+	i3-msg 'scratchpad show' # make acrive
+	i3-msg 'scratchpad show' # hide
+}
 
+turn_off_screensaver() {
+	xset s off
+	xset -dpms
+}
+
+enable_wallpaper() {
+	feh --no-fehbg --bg-fill ~/Downloads/bg.png
+}
+
+setup_keyboard() {
+	# - add ru keyboard
+	# - toggle lang on win-space
+	# - rebind CapsLock to Ctrl
+	setxkbmap -layout us,ru -option '' -option 'grp:win_space_toggle' -option 'ctrl:nocaps' -option 'numpad:microsoft'
+}
+
+xrandr --output eDP-1 --mode 1920x1080 # screen resolution
+parcellite &                           # enable clip command on cli
+setup_keyboard
+run_heynote
+turn_off_screensaver
+enable_wallpaper
