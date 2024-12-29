@@ -70,11 +70,13 @@ function prompt_command {
   if [ "${branch}" ]; then
       branch="(${branch}${dirty})";
   fi;
+
   if [ ${exitstatus} -eq 0 ]; then
       EXITCOLOR="${WHITE}";
   else
       EXITCOLOR="${RED}";
   fi;
+
   k8s_ctx=$(kubectx --current);
   k8s_ns=$(kubens --current);
   k8s="(k8s://${BLUE}${k8s_ctx}${OFF}/${CYAN}${k8s_ns}${OFF})";
