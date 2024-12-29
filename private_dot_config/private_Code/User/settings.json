@@ -1,0 +1,96 @@
+{
+    "editor.rulers": [
+        80,
+        120
+    ],
+    "editor.minimap.enabled": false,
+    "window.menuBarVisibility": "toggle",
+    "rust-analyzer.completion.addCallParenthesis": false,
+    "rust-analyzer.completion.addCallArgumentSnippets": false,
+    "rust-analyzer.completion.autoimport.enable": false,
+    "rust-analyzer.completion.autoself.enable": false,
+    "rust-analyzer.completion.postfix.enable": false,
+    "rust-analyzer.inlayHints.enable": false,
+    "editor.autoClosingBrackets": "never",
+    "rust-analyzer.checkOnSave.allTargets": false,
+    "rust-analyzer.lens.debug": false,
+    "rust-analyzer.lens.run": false,
+    "workbench.startupEditor": "none",
+    "extensions.autoCheckUpdates": false,
+    "update.showReleaseNotes": false,
+    "extensions.autoUpdate": false,
+    "update.mode": "none",
+    "rust-analyzer.lens.implementations": false,
+    "explorer.confirmDelete": false,
+    "explorer.confirmDragAndDrop": false,
+    "workbench.editor.enablePreview": false,
+    "editor.suggest.showReferences": false,
+    "rust-analyzer.cargo.buildScripts.enable": false,
+    "rust-analyzer.diagnostics.experimental.enable": true,
+    "rust-analyzer.hover.actions.debug.enable": false,
+    "rust-analyzer.hover.actions.implementations.enable": false,
+    "rust-analyzer.hover.actions.run.enable": false,
+    "rust-analyzer.inlayHints.chainingHints.enable": false,
+    "rust-analyzer.inlayHints.parameterHints.enable": false,
+    "rust-analyzer.inlayHints.typeHints.enable": false,
+    "editor.fontFamily": "Source Code Pro, monospace",
+    "files.insertFinalNewline": true,
+    "javascript.updateImportsOnFileMove.enabled": "never",
+    "workbench.editor.focusRecentEditorAfterClose": false,
+    "asciidoc.use_asciidoctorpdf": true,
+    "asciidoc.use_kroki": true,
+    "files.exclude": {
+        "**/.trunk/*out": true
+    },
+    "trunk.trunkGrayOutNonBlockingIssues": false,
+    "files.watcherExclude": {
+        "**/.trunk/*out": true
+    },
+    "workbench.colorTheme": "Learn with Sumit - Professional",
+    "svelte.enable-ts-plugin": true,
+    "svelte.plugin.svelte.note-new-transformation": false,
+    "svg.preview.mode": "svg",
+    "redhat.telemetry.enabled": false,
+    "ansible.ansible.path": ".venv/bin/ansible",
+    "ansible.ansibleNavigator.path": ".venv/bin/ansible-navigator",
+    "ansible.python.interpreterPath": ".venv/bin/python3",
+    "ansible.validation.lint.path": ".venv/bin/ansible-lint",
+    "search.useIgnoreFiles": false,
+    "D2.previewLayout": "elk",
+    "[python]": {
+        "editor.formatOnType": true
+    },
+    "codeium.enableConfig": {
+        "*": true,
+        "markdown": true,
+        "jsonnet": true,
+        "dockercompose": true
+    },
+    "zig.zls.path": "/home/rprtr258/.config/Code/User/globalStorage/ziglang.vscode-zig/zls_install/zls",
+    "zig.zls.enableInlayHints": false,
+    "go.survey.prompt": false,
+    "git.openRepositoryInParentFolders": "never",
+    "diffEditor.codeLens": true,
+    "gopls": {
+        "formatting.gofumpt": true,
+        "ui.diagnostic.analyses": {
+            "stdmethods": false
+        },
+    },
+    "go.toolsManagement.autoUpdate": true,
+    // "go    .formatTool": "gofumpt",
+    "go.lintTool": "golangci-lint",
+    "go.lintOnSave": "workspace",
+    "editor.formatOnSave": true,
+    "diffEditor.wordWrap": "off",
+    "[vue]": {
+        "editor.formatOnType": false,
+        "editor.formatOnSave": false
+    },
+    "vue.autoInsert.bracketSpacing": false,
+    "vue.autoInsert.parentheses": false,
+    "vue.codeActions.enabled": false,
+    "vue.codeLens.enabled": false,
+    "vue.complete.normalizeComponentImportName": false,
+    "vue.server.fullCompletionList": true
+}

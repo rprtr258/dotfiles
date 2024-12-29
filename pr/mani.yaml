@@ -46,6 +46,10 @@ projects:
     tags: [go]
     url: git@github.com:rprtr258/cronus.git
 
+  cs:
+    tags: [go]
+    url: git@github.com:rprtr258/cs.git
+
   debuql:
     tags: [go]
 
@@ -68,10 +72,6 @@ projects:
     tags: [go, docker]
     url: git@github.com:rprtr258/forward-proxy.git
 
-  fun:
-    tags: [go]
-    url: git@github.com:rprtr258/fun.git
-
   game:
     url: git@github.com:rprtr258/sonar-game.git
 
@@ -80,13 +80,13 @@ projects:
   gendoc:
     tags: [go]
 
-  gobackup:
+  fun:
     tags: [go]
-    url: git@github.com:rprtr258/gobackup.git
+    url: git@github.com:rprtr258/fun.git
 
-  go-flow:
+  flatnotes:
     tags: [go]
-    url: git@github.com:rprtr258/go-flow.git
+    url: git@github.com:rprtr258/flatnotes.git
 
   gtd:
     url: git@github.com:rprtr258/gtd.git
@@ -147,6 +147,10 @@ projects:
   sixty:
     tags: [go]
     url: git@github.com:rprtr258/sixty.git
+
+  styleguide:
+    tags: [go]
+    url: git@github.com:rprtr258/styleguide.git
 
   squid-proxy:
     tags: [docker, fork]
