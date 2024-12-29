@@ -1,3 +1,6 @@
+sourceDir = "/home/rprtr258/.local/share/chezmoi"
+
 [git]
-    autoCommit = true
-    autoPush = true
+autocommit = true
+autopush = true
+
