@@ -159,6 +159,21 @@ fi
 export PATH=$PATH:~/bin
 export PATH=$PATH:/usr/local/go/bin
 export PATH=$PATH:~/go/bin
+export PATH=$PATH:/var/lib/flatpak/exports/bin/
+export PATH=$PATH:~/.o3-cli/bin # TODO: remove
+export PATH=$PATH:~/.krew/bin # TODO: remove
+export EDITOR=nvim
+export RIPGREP_CONFIG_PATH=~/.config/.ripgreprc
+export AUTOENV_ENABLE_LEAVE=1
+source "$HOME/.autoenv/activate.sh"
+. "$HOME/.cargo/env"
+export GOPROXY="direct"
+export GOSUMDB="sum.golang.org"
+function bun {
+  export BUN_INSTALL="$HOME/.bun"
+  export PATH=$BUN_INSTALL/bin:$PATH
+}
+bun
 
 ssh-add ~/.ssh/{github,gitlab,infra,vps_root,asus} 2>/dev/null
 

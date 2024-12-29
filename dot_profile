@@ -28,21 +28,3 @@ fi
 #. "$HOME/.cargo/env"
 export PATH="/home/rprtr258/.cargo/bin:/home/rprtr258/.local/bin:/home/rprtr258/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games:/snap/bin:/usr/local/go/bin:/home/rprtr258/go/bin:/var/lib/flatpak/exports/bin/:/home/rprtr258/.o3-cli/bin:/home/rprtr258/.krew/bin:/home/rprtr258/.vector/bin"
 
-export PATH=$PATH:/var/lib/flatpak/exports/bin/
-export PATH=$PATH:~/.o3-cli/bin # TODO: remove
-export PATH=$PATH:~/.krew/bin # TODO: remove
-export EDITOR=nvim
-export RIPGREP_CONFIG_PATH=~/.config/.ripgreprc
-
-export AUTOENV_ENABLE_LEAVE=1
-source "$HOME/.autoenv/activate.sh"
-. "$HOME/.cargo/env"
-export GOPROXY="direct"
-export GOSUMDB="sum.golang.org"
-
-function bun {
-  export BUN_INSTALL="$HOME/.bun"
-  export PATH=$BUN_INSTALL/bin:$PATH
-}
-bun
-
