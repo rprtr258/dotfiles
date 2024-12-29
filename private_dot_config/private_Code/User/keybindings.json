@@ -1,6 +1,10 @@
 // Place your key bindings in this file to override the defaults
 [
     {
+        "key": "ctrl+p",
+        "command": "workbench.action.quickOpen"
+    },
+    {
         "key": "alt+right",
         "command": "workbench.action.moveEditorToNextGroup",
         "when": "!terminalFocus"
