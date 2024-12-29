@@ -1,19 +1,19 @@
 # If not running interactively, don't do anything
 case $- in
-    *i*) ;;
-      *) return;;
+  *i*) ;;
+    *) return;;
 esac
 
 # don't put duplicate lines or lines starting with space in the history.
 # See bash(1) for more options
 HISTCONTROL=ignoreboth
 
-# append to the history file, don't overwrite it
-shopt -s histappend
-
 # unlimited history
 HISTSIZE=
 HISTFILESIZE=
+
+# append to the history file, don't overwrite it
+shopt -s histappend
 
 # check the window size after each command and, if necessary,
 # update the values of LINES and COLUMNS.
@@ -26,130 +26,121 @@ shopt -s checkwinsize
 # make less more friendly for non-text input files, see lesspipe(1)
 #[ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
 
-# set variable identifying the chroot you work in (used in the prompt below)
-if [ -z "${debian_chroot:-}" ] && [ -r /etc/debian_chroot ]; then
-    debian_chroot=$(cat /etc/debian_chroot)
-fi
-
-# set a fancy prompt (non-color, unless we know we "want" color)
-case "$TERM" in
-    xterm-color|*-256color) color_prompt=yes;;
-esac
-
 # uncomment for a colored prompt, if the terminal has the capability; turned
 # off by default to not distract the user: the focus in a terminal window
 # should be on the output of commands, not on the prompt
 #force_color_prompt=yes
 
 if [ -n "$force_color_prompt" ]; then
-    if [ -x /usr/bin/tput ] && tput setaf 1 >&/dev/null; then
-	# We have color support; assume it's compliant with Ecma-48
-	# (ISO/IEC-6429). (Lack of such support is extremely rare, and such
-	# a case would tend to support setf rather than setaf.)
-	color_prompt=yes
-    else
-	color_prompt=
-    fi
+  if [ -x /usr/bin/tput ] && tput setaf 1 >&/dev/null; then
+	  # We have color support; assume it's compliant with Ecma-48
+	  # (ISO/IEC-6429). (Lack of such support is extremely rare, and such
+	  # a case would tend to support setf rather than setaf.)
+	  color_prompt=yes
+  else
+	  color_prompt=
+  fi
 fi
 
 function git-branch {
-    echo $(git symbolic-ref HEAD 2> /dev/null | sed -e 's?refs/heads/??g')
+  echo $(git symbolic-ref HEAD 2> /dev/null | sed -e 's?refs/heads/??g')
 }
 
 function prompt_command {
-    local exitstatus="$?"
-    local USER="\u"
-    local HOSTNAME="\h"
-    local PROMPT='\n\$ '
-
-    local BOLD="\[\033[1m\]"
-    local RED='\[\e[91m\]'
-    local GREEN='\[\033[01;32m\]'
-    local BLUE='\[\033[01;34m\]'
-    local PURPLE="\[\e[35;1m\]"
-    local CYAN="\[\e[36;1m\]"
-    local WHITE='\[\033[00m\]'
-    local OFF="\[\033[m\]"
-
-    branch=$(git-branch)
-    changes=$(git status -s 2> /dev/null | wc -l | sed -e 's/ *//')
-    if [ ${changes} -eq 0 ]; then
-      dirty=""
-    else
-      dirty="*"
-    fi
-    if [ ${branch} ]; then
-        branch="(${branch}${dirty})"
-    fi
-
-    if [ ${exitstatus} -eq 0 ]; then
-      EXITCOLOR="${WHITE}"
-    else
-      EXITCOLOR="${RED}"
-    fi
-
-    PS1="${VIRTUAL_ENV_PROMPT}${GREEN}${USER}@${HOSTNAME}${OFF}:${BLUE}\w${RED}${branch}${OFF}[${EXITCOLOR}${exitstatus}${OFF}]${PROMPT}"
-    PS2="${BOLD}>${OFF} "
-    
-    local dir=$(pwd)
-    local title=$(basename "${dir}")
-    echo -n -e "\033]0;${title}\007"
+  local exitstatus="$?";
+  local USER="\u";
+  local HOSTNAME="\h";
+  local PROMPT='\n\$ ';
+  local BOLD="\[\033[1m\]";
+  local RED='\[\e[91m\]';
+  local GREEN='\[\033[01;92m\]';
+  local BLUE='\[\033[01;34m\]';
+  local CYAN="\[\e[36;1m\]";
+  local WHITE='\[\033[00m\]';
+  local OFF="\[\033[m\]";
+  branch=$(git-branch);
+  changes=$(git status -s 2> /dev/null | wc -l | sed -e 's/ *//');
+  if [ "${changes}" -eq 0 ]; then
+      dirty="";
+  else
+      dirty="*";
+  fi;
+  if [ "${branch}" ]; then
+      branch="(${branch}${dirty})";
+  fi;
+  if [ ${exitstatus} -eq 0 ]; then
+      EXITCOLOR="${WHITE}";
+  else
+      EXITCOLOR="${RED}";
+  fi;
+  k8s_ctx=$(kubectx --current);
+  k8s_ns=$(kubens --current);
+  k8s="(k8s://${BLUE}${k8s_ctx}${OFF}/${CYAN}${k8s_ns}${OFF})";
+  PS1="${VIRTUAL_ENV_PROMPT}${GREEN}${USER}@${HOSTNAME}${OFF}${k8s}:${BLUE}\w${RED}${branch}${OFF}[${EXITCOLOR}${exitstatus}${OFF}]${PROMPT}";
+  PS2="${BOLD}>${OFF} ";
+  title=$(basename "$PWD");
+  echo -n -e "\033]0;${title}\007"
 }
-
 PROMPT_COMMAND=prompt_command
 
-# If this is an xterm set the title to user@host:dir
-case "$TERM" in
-xterm*|rxvt*)
-    PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h: \w\a\]$PS1"
-    ;;
-*)
-    ;;
-esac
-
 # enable color support of ls and also add handy aliases
-if [ -x /usr/bin/dircolors ]; then
-    test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
-    alias ls='ls --color=auto'
-    #alias dir='dir --color=auto'
-    #alias vdir='vdir --color=auto'
-
-    #alias grep='grep --color=auto'
-    #alias fgrep='fgrep --color=auto'
-    #alias egrep='egrep --color=auto'
-fi
+eval $(dircolors -b ~/.bash_colors)
 
 # colored GCC warnings and errors
 #export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
 
 # ALIASES
 alias dirs="dirs -v"
-alias ll='ls -lAF'
+alias ls='ls --color=auto'
+alias ll='ls -lAFh'
 alias la='ls -AF'
 alias l='ls -CF'
 alias clip='xclip -selection clipboard'
 alias mv='mv -i'
 alias cp='cp -i'
+alias dps='docker ps --format "table {{.Names}}\t{{.Image}}\t{{.Status}}\t{{.Ports}}"'
+alias ssh="TERM=xterm-256color $(which ssh)"
+alias bat='bat --style=numbers,rule,header'
+alias k='kubectl'
+alias pstree='pstree -hnpsT'
+alias vault='VAULT_ADDR=https://vault.s.o3.ru:8200 vault'
+alias vim='nvim'
+
 alias gs='git status'
 alias ga='git add'
 function gm {
   local BRANCH="$(git-branch)"
   git commit -m "$BRANCH: $*"
 }
-
 export GIT_EXTERNAL_DIFF=difft
 alias gd='git diff'
-
-alias gt='git log --graph --decorate=full --oneline --all'
+alias ga='git add'
+alias gs='git status'
+alias gt='git log --graph --decorate=full --oneline'
 alias git-prune="git branch --merged master | grep -v '^[ *]*master$' | xargs git branch -d"
-alias dps='docker ps --format "table {{.Names}}\t{{.Image}}\t{{.Status}}\t{{.Ports}}"'
-alias ssh="TERM=xterm-256color $(which ssh)"
-
 function gpu {
-    branch=$(git-branch)
-    git push -u origin $branch
+  branch=$(git-branch)
+  git push -u origin $branch
 }
 
+function _completion {
+  chezmoi completion bash;
+  gh completion -s bash;
+  gopass completion bash;
+  hugo completion bash;
+  itc completion bash;
+  jj util completion bash;
+  kubectl completion bash;
+  mani completion bash;
+  pm completion bash;
+  pm2 completion;
+  steampipe completion bash;
+  echo "complete -C $(which vault) vault";
+  echo "complete -C x x";
+  zellij setup --generate-completion bash;
+}
+#_completion > ~/.bash_completion
+source ~/.bash_completion
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
 # sources /etc/bash.bashrc).
@@ -161,28 +152,7 @@ if ! shopt -oq posix; then
   fi
 fi
 
-ssh-add ~/.ssh/github 2>/dev/null
+ssh-add ~/.ssh/{github,gitlab,infra,vps_root,asus} 2>/dev/null
 
-. "$HOME/.cargo/env"
-eval $(dircolors -b ~/.bash_colors)
-
-export PATH=$PATH:/usr/local/go/bin
-export PATH=$PATH:~/go/bin
-export PATH=$PATH:~/bin
-export PATH=$PATH:/var/lib/flatpak/exports/bin
-export EDITOR=vim
-
-[[ -s "/home/rprtr258/.gvm/scripts/gvm" ]] && source "/home/rprtr258/.gvm/scripts/gvm"
-
-complete -C x x
-complete -C /home/rprtr258/bin/nomad nomad
-#echo "$(pm2 completion)" >> .complete
-#echo "$(sake completion bash)" >> .complete
-#echo "$(chezmoi completion bash)" >> .complete
-#echo "$(gh completion -s bash)" >> .complete
-#echo "$(mani completion bash)" >> .complete
-source ~/.complete
-
-[[ -f ~/.bash-preexec.sh ]] && source ~/.bash-preexec.sh
-eval "$(atuin init bash --disable-up-arrow)"
+eval "$(fzf --bash)"
 
