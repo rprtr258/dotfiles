@@ -156,6 +156,10 @@ if ! shopt -oq posix; then
   fi
 fi
 
+export PATH=$PATH:~/bin
+export PATH=$PATH:/usr/local/go/bin
+export PATH=$PATH:~/go/bin
+
 ssh-add ~/.ssh/{github,gitlab,infra,vps_root,asus} 2>/dev/null
 
 eval "$(fzf --bash)"
