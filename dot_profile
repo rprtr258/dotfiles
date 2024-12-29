@@ -30,6 +30,7 @@ export PATH="/home/rprtr258/.cargo/bin:/home/rprtr258/.local/bin:/home/rprtr258/
 
 export PATH=$PATH:/usr/local/go/bin
 export PATH=$PATH:~/go/bin
+export PATH=$PATH:~/bin
 export PATH=$PATH:/var/lib/flatpak/exports/bin/
 export PATH=$PATH:~/.o3-cli/bin # TODO: remove
 export PATH=$PATH:~/.krew/bin # TODO: remove
