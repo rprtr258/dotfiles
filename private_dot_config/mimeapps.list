@@ -1,9 +1,9 @@
 [Default Applications]
-text/html=firefox-esr.desktop
-x-scheme-handler/http=firefox-esr.desktop
-x-scheme-handler/https=firefox-esr.desktop
-x-scheme-handler/about=firefox-esr.desktop
-x-scheme-handler/unknown=firefox-esr.desktop
+text/html=google-chrome.desktop
+x-scheme-handler/http=google-chrome.desktop
+x-scheme-handler/https=google-chrome.desktop
+x-scheme-handler/about=google-chrome.desktop
+x-scheme-handler/unknown=google-chrome.desktop
 image/webp=firefox-esr.desktop
 image/png=org.gnome.eog.desktop
 image/jpeg=org.gnome.eog.desktop
@@ -29,13 +29,17 @@ image/svg+xml=firefox-esr.desktop;
 x-scheme-handler/jetbrains=jetbrains-toolbox.desktop
 x-scheme-handler/fleet=jetbrains-fleet.desktop
 video/webm=org.gnome.Totem.desktop
-video/mp4=vlc.desktop
-image/avif=firefox-esr.desktop
-x-scheme-handler/obsidian=md.obsidian.Obsidian.desktop
+x-scheme-handler/relagit=relagit.desktop
+x-scheme-handler/postman=Postman.desktop
+application/json=vim.desktop
+image/vnd.djvu+multipage=org.gnome.Evince.desktop
+application/epub+zip=org.gnome.Evince.desktop
+text/x-python=lvim.desktop
+x-scheme-handler/apidog=apidog.desktop
 
 [Added Associations]
 application/xml=org.gnome.gedit.desktop;
-application/octet-stream=org.gnome.gedit.desktop;
+application/octet-stream=vim.desktop;org.gnome.gedit.desktop;
 x-scheme-handler/http=firefox-esr.desktop;
 x-scheme-handler/https=firefox-esr.desktop;
 x-scheme-handler/chrome=firefox-esr.desktop;
@@ -58,5 +62,7 @@ image/webp=gimp.desktop;
 image/gif=gimp.desktop;
 text/x-ocaml=vim.desktop;
 video/webm=org.gnome.Totem.desktop;
-video/mp4=vlc.desktop;
-image/avif=firefox-esr.desktop;
+application/json=vim.desktop;
+image/vnd.djvu+multipage=org.gnome.Evince.desktop;
+application/epub+zip=org.gnome.Evince.desktop;
+text/x-python=lvim.desktop;
