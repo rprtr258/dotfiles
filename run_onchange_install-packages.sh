@@ -10,4 +10,5 @@ sudo rm -rf /usr/local/go && sudo tar -C /usr/local -xzf go1.23.4.linux-amd64.ta
 rm go1.23.4.linux-amd64.tar.gz
 export PATH=$PATH:/usr/local/go/bin
 go version
+go install github.com/junegunn/fzf@latest
 
