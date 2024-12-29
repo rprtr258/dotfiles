@@ -6,7 +6,7 @@ flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.f
 flatpak install flathub org.telegram.desktop
 
 wget https://go.dev/dl/go1.23.4.linux-amd64.tar.gz
-rm -rf /usr/local/go && tar -C /usr/local -xzf go1.23.4.linux-amd64.tar.gz
+rm -rf /usr/local/go && sudo tar -C /usr/local -xzf go1.23.4.linux-amd64.tar.gz
 rm go1.23.4.linux-amd64.tar.gz
 export PATH=$PATH:/usr/local/go/bin
 go version
