@@ -5,7 +5,7 @@ line-number = "relative"
 mouse = false
 auto-pairs = false
 rulers = [80, 120]
-scrolloff = 1
+scrolloff = 2
 
 [editor.cursor-shape]
 insert = "bar"
@@ -13,5 +13,5 @@ normal = "block"
 select = "block"
 
 [editor.file-picker]
-hidden = true
+hidden = false
 
