@@ -146,6 +146,11 @@ bindsym $mod+Shift+r restart
 # bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
 bindsym $mod+Shift+e exec ~/.config/rofi/powermenu/.sh
 
+# Make the currently focused window a scratchpad
+bindsym $mod+Shift+minus move scratchpad
+# Show the first scratchpad window
+bindsym $mod+minus scratchpad show
+
 # resize window (you can also use the mouse for that)
 mode "resize" {
         # These bindings trigger as soon as you enter the resize mode
@@ -180,6 +185,8 @@ bar {
         output_format i3bar_command "i3bar"
 }
 
+# class                 border  backgr. text    indicator child_border
+client.focused          #5b4c66 #655a94 #ffffff #2e9ef4   #655a94
 for_window [class="^.*"] border pixel 0
-for_window [class="__focused__"] border pixel 3
+for_window [class="__focused__"] border pixel 2
 
