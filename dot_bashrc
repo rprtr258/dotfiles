@@ -169,11 +169,11 @@ source "$HOME/.autoenv/activate.sh"
 . "$HOME/.cargo/env"
 export GOPROXY="direct"
 export GOSUMDB="sum.golang.org"
-function bun {
+function _bun {
   export BUN_INSTALL="$HOME/.bun"
   export PATH=$BUN_INSTALL/bin:$PATH
 }
-bun
+_bun
 
 ssh-add ~/.ssh/{github,gitlab,infra,vps_root,asus} 2>/dev/null
 
